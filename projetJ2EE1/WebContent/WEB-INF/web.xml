@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>projetJ2EE1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>MyEleve</servlet-name>
+		<servlet-class>fr.j2ee.servlets.Eleve</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyEleve</servlet-name>
+		<url-pattern>/Eleve</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MyIndex</servlet-name>
+		<servlet-class>fr.j2ee.servlets.Index</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyIndex</servlet-name>
+		<url-pattern>/Index</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MyContact</servlet-name>
+		<servlet-class>fr.j2ee.servlets.Contact</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyContact</servlet-name>
+		<url-pattern>/Contact</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MySession</servlet-name>
+		<servlet-class>fr.j2ee.servlets.Session</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySession</servlet-name>
+		<url-pattern>/Session</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MyConverter</servlet-name>
+		<servlet-class>fr.j2ee.servlets.ClassConverter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyConverter</servlet-name>
+		<url-pattern>/Converter</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>ClickCounterFilter</filter-name>
+		<filter-class>fr.j2ee.filter.Filtrer</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ClickCounterFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
